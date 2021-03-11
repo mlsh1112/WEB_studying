@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1 Ajou Movie Information
+  h3 Register Movie
+  p Please enter the movie information to add a review
+  form(action="/result", method='POST')
+    input(type='text', placeholder='title', name='mvtitle')
+    p
+    input(type='text', name='character', placeholder='character')
+    p
+    input(type='text', name='genre',placeholder='genre')
+    p
+    input(type='text', name='imgpath',placeholder='movie img path')
+    p
+    input(type='radio' id='0' name='score' value='0')
+    | 0
+    input(type='radio' id='1' name='score' value='1')
+    | 1
+    input(type='radio' id='2' name='score' value='2')
+    | 2
+    input(type='radio' id='3' name='score' value='3')
+    | 3
+    input(type='radio' id='4' name='score' value='4')
+    | 4
+    input(type='radio' id='5' name='score' value='5')
+    | 5
+
+    p
+    input(type='submit' value='submit')

@@ -1,0 +1,35 @@
+extends layout
+
+
+block content
+    script.
+        window.onload = function () {
+
+            var movie = !{JSON.stringify(movie)};
+            var score = !{JSON.stringify(score)};
+
+            document.getElementById("mvTitle").innerHTML = movie.title;
+            document.getElementById("mvC").innerHTML = movie.character;
+            document.getElementById("mvG").innerHTML = movie.genre;
+        };
+
+
+    img(src=`${imgPath}` width="165px" height="600px")
+    h3(id="mvTitle")
+    hr
+    p(id="mvC")
+    p(id="mvG")
+    hr
+    -for (var idx = 0; idx <`${score}`; idx++)
+        img(src='/images/star.svg' class='rating-star-img' width="30px" height="30px")
+    hr
+
+    form(action='/' method='get')
+        input(type='submit' value='Go home')
+
+
+
+
+
+
+
